@@ -1,0 +1,2 @@
+# CustomTransitionController
+自动以ViewController的转场动画
