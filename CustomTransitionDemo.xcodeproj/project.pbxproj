@@ -14,6 +14,9 @@
 		493CA9951CD1B8E1009D0EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493CA9941CD1B8E1009D0EFF /* Assets.xcassets */; };
 		493CA9981CD1B8E1009D0EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493CA9961CD1B8E1009D0EFF /* LaunchScreen.storyboard */; };
 		493CA9A31CD1B8E1009D0EFF /* CustomTransitionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 493CA9A21CD1B8E1009D0EFF /* CustomTransitionDemoTests.m */; };
+		493CA9B01CD1BB5F009D0EFF /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 493CA9AF1CD1BB5F009D0EFF /* Animator.m */; };
+		493CA9B31CD1DEF8009D0EFF /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 493CA9B21CD1DEF8009D0EFF /* NavigationControllerDelegate.m */; };
+		493CA9B61CD1E81B009D0EFF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 493CA9B51CD1E81B009D0EFF /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		493CA99E1CD1B8E1009D0EFF /* CustomTransitionDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTransitionDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		493CA9A21CD1B8E1009D0EFF /* CustomTransitionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransitionDemoTests.m; sourceTree = "<group>"; };
 		493CA9A41CD1B8E1009D0EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493CA9AE1CD1BB5F009D0EFF /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
+		493CA9AF1CD1BB5F009D0EFF /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
+		493CA9B11CD1DEF8009D0EFF /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		493CA9B21CD1DEF8009D0EFF /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
+		493CA9B41CD1E81B009D0EFF /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		493CA9B51CD1E81B009D0EFF /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,12 @@
 				493CA9961CD1B8E1009D0EFF /* LaunchScreen.storyboard */,
 				493CA9991CD1B8E1009D0EFF /* Info.plist */,
 				493CA9881CD1B8E1009D0EFF /* Supporting Files */,
+				493CA9AE1CD1BB5F009D0EFF /* Animator.h */,
+				493CA9AF1CD1BB5F009D0EFF /* Animator.m */,
+				493CA9B11CD1DEF8009D0EFF /* NavigationControllerDelegate.h */,
+				493CA9B21CD1DEF8009D0EFF /* NavigationControllerDelegate.m */,
+				493CA9B41CD1E81B009D0EFF /* SecondViewController.h */,
+				493CA9B51CD1E81B009D0EFF /* SecondViewController.m */,
 			);
 			path = CustomTransitionDemo;
 			sourceTree = "<group>";
@@ -211,7 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493CA9B61CD1E81B009D0EFF /* SecondViewController.m in Sources */,
+				493CA9B01CD1BB5F009D0EFF /* Animator.m in Sources */,
 				493CA9901CD1B8E1009D0EFF /* ViewController.m in Sources */,
+				493CA9B31CD1DEF8009D0EFF /* NavigationControllerDelegate.m in Sources */,
 				493CA98D1CD1B8E1009D0EFF /* AppDelegate.m in Sources */,
 				493CA98A1CD1B8E1009D0EFF /* main.m in Sources */,
 			);

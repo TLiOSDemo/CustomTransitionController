@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+     self.view.backgroundColor=[UIColor whiteColor];
+     self.title=@"ViewController";
+    [self initView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void)initView{
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(10, 10, 100, 50)];
+    [btn setTitle:@"push" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    btn.center=self.view.center;
+    [btn addTarget:self action:@selector(pushAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
+
+-(void)pushAction:(UIButton *)btn{
+    SecondViewController *vc=[[SecondViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

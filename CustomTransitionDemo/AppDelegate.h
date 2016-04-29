@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavigationControllerDelegate.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : NavigationControllerDelegate <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
