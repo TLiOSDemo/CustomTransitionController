@@ -12,7 +12,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.title=@"SecondViewController";
-    self.view.backgroundColor=[UIColor groupTableViewBackgroundColor];
+    self.view.backgroundColor=[UIColor blueColor];
     
     UILabel *lb=[[UILabel alloc]initWithFrame:CGRectMake(10, 10, 100, 40)];
     lb.center=self.view.center;

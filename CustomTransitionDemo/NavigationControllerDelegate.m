@@ -8,10 +8,13 @@
 
 #import "NavigationControllerDelegate.h"
 #import "Animator.h"
+#import "GPUImageAnimator.h"
 
 @interface NavigationControllerDelegate()
 
 @property (strong,nonatomic)Animator *animator;
+
+@property (nonatomic,strong)GPUImageAnimator *gpuImageAnimator;
 /**
  *  交互协议
  */
@@ -26,6 +29,7 @@
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
     [self.navigationController.view addGestureRecognizer:panGesture];
     self.animator=[Animator new];
+    self.gpuImageAnimator=[GPUImageAnimator new];
 }
 
 
@@ -71,8 +75,9 @@
  */
 -(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
 
-    if(operation == UINavigationControllerOperationPop){
-        return self.animator;
+    if(operation == UINavigationControllerOperationPush){
+       // return self.animator;
+        return self.gpuImageAnimator;
     }
     
     return nil;
