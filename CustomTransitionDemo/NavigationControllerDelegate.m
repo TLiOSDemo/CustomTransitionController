@@ -10,7 +10,7 @@
 #import "Animator.h"
 
 @interface NavigationControllerDelegate()
-@property (nonatomic,strong)UINavigationController *navigationController;
+
 @property (strong,nonatomic)Animator *animator;
 /**
  *  交互协议
@@ -21,23 +21,23 @@
 
 @implementation NavigationControllerDelegate
 
--(instancetype)init{
-    self=[super init];
-    if(self){
-        UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
-        [self.navigationController.view addGestureRecognizer:panGesture];
-        self.animator=[Animator new];
-    }
-    return self;
+
+-(void)initRequest{
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
+    [self.navigationController.view addGestureRecognizer:panGesture];
+    self.animator=[Animator new];
 }
+
+
+
 
 -(void)pan:(UIPanGestureRecognizer *)panGesture{
     UIView *view=self.navigationController.view;
     if(panGesture.state == UIGestureRecognizerStateBegan){
         CGPoint location = [panGesture locationInView:view];
-        if(location.x > CGRectGetMidX(view.bounds)&& self.navigationController.viewControllers.count>1){
+        if(location.x < CGRectGetMidX(view.bounds)&& self.navigationController.viewControllers.count>=1){
             self.interactiveTransition=[[UIPercentDrivenInteractiveTransition alloc]init];
-            [self.navigationController pushViewController:self animated:YES];
+            [self.navigationController popViewControllerAnimated:YES];
             
         }
     }else if (panGesture.state == UIGestureRecognizerStateChanged){
@@ -49,7 +49,7 @@
        
         
     }else if(panGesture.state==UIGestureRecognizerStateEnded){
-        if([panGesture velocityInView:view].x<0){
+        if([panGesture velocityInView:view].x>0){
             [self.interactiveTransition finishInteractiveTransition];
         }else{
             [self.interactiveTransition cancelInteractiveTransition];
@@ -71,7 +71,7 @@
  */
 -(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
 
-    if(operation == UINavigationControllerOperationPush){
+    if(operation == UINavigationControllerOperationPop){
         return self.animator;
     }
     

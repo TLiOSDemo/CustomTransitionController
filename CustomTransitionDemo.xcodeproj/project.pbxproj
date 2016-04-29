@@ -175,6 +175,7 @@
 				TargetAttributes = {
 					493CA9841CD1B8E0009D0EFF = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = DA9X37GALQ;
 					};
 					493CA99D1CD1B8E1009D0EFF = {
 						CreatedOnToolsVersion = 7.3;
@@ -359,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CustomTransitionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tongli.CustomTransitionDemo;
@@ -370,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CustomTransitionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tongli.CustomTransitionDemo;
@@ -420,6 +423,7 @@
 				493CA9A91CD1B8E1009D0EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		493CA9AA1CD1B8E1009D0EFF /* Build configuration list for PBXNativeTarget "CustomTransitionDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +432,7 @@
 				493CA9AC1CD1B8E1009D0EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

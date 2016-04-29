@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NavigationControllerDelegate : NSObject<UINavigationControllerDelegate>
+@property (nonatomic,strong)UINavigationController *navigationController;
+
+-(void)initRequest;
 
 @end

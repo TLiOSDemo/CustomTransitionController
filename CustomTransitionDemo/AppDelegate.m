@@ -24,6 +24,8 @@
     [self.window makeKeyAndVisible];
     
     nav.delegate=self;
+    self.navigationController=nav;
+    [self initRequest];
     return YES;
 }
 
